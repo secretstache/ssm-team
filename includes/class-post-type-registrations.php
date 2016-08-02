@@ -54,6 +54,7 @@ class SSM_Team_Registrations {
 
 		$supports = array(
 			'title',
+			'editor',
 			'thumbnail',
 			'genesis-layouts',
 			'genesis-seo'
