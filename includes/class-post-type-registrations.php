@@ -30,7 +30,7 @@ class SSM_Team_Registrations {
 	 */
 	public function register() {
 		$this->register_post_type();
-		$this->register_taxonomy_category();
+		// $this->register_taxonomy_category();
 	}
 
 	/**
