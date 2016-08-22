@@ -1,5 +1,6 @@
 {
 "0.1.0" : "Initial Beta Release",
 "0.1.1" : "Adds kernl plugin checker",
-"0.1.2" : "Fixes plugin description"
+"0.1.2" : "Fixes plugin description",
+"0.1.2" : "Version bump"
 }
