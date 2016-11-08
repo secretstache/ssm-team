@@ -111,7 +111,7 @@ class SSM_Team_Registrations {
 			'show_in_nav_menus' => false,
 			'show_ui'           => true,
 			'show_tagcloud'     => false,
-			'hierarchical'      => false,
+			'hierarchical'      => true,
 			'rewrite'           => false,
 			'show_admin_column' => true,
 			'query_var'         => true,
