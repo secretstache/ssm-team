@@ -15,7 +15,7 @@ class SSM_Team_Registrations {
 
 	public $post_type = 'team';
 
-	// public $taxonomies = array( 'team-category' );
+	public $taxonomies = array( 'departments' );
 
 	public function init() {
 		// Add the SSM Team and taxonomies
@@ -30,7 +30,7 @@ class SSM_Team_Registrations {
 	 */
 	public function register() {
 		$this->register_post_type();
-		// $this->register_taxonomy_category();
+		$this->register_taxonomy_category();
 	}
 
 	/**
@@ -70,7 +70,7 @@ class SSM_Team_Registrations {
 			'show_in_nav_menus' 		=> false,
 			'rewrite'         			=> false,
 			'menu_position'   			=> 30,
-			'menu_icon'       			=> 'dashicons-admin-page',
+			'menu_icon'       			=> 'dashicons-businessman',
 			'has_archive'						=> false,
 			'exclude_from_search'		=> true,
 		);
@@ -85,40 +85,40 @@ class SSM_Team_Registrations {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/register_taxonomy
 	 */
-	// protected function register_taxonomy_category() {
-	// 	$labels = array(
-	// 		'name'                       => __( 'Collection Categories', 'ssm-team' ),
-	// 		'singular_name'              => __( 'Collection Category', 'ssm-team' ),
-	// 		'menu_name'                  => __( 'Collection Categories', 'ssm-team' ),
-	// 		'edit_item'                  => __( 'Edit Collection Category', 'ssm-team' ),
-	// 		'update_item'                => __( 'Update Collection Category', 'ssm-team' ),
-	// 		'add_new_item'               => __( 'Add New Collection Category', 'ssm-team' ),
-	// 		'new_item_name'              => __( 'New Collection Category Name', 'ssm-team' ),
-	// 		'parent_item'                => __( 'Parent Collection Category', 'ssm-team' ),
-	// 		'parent_item_colon'          => __( 'Parent Collection Category:', 'ssm-team' ),
-	// 		'all_items'                  => __( 'All Collection Categories', 'ssm-team' ),
-	// 		'search_items'               => __( 'Search Collection Categories', 'ssm-team' ),
-	// 		'popular_items'              => __( 'Popular Collection Categories', 'ssm-team' ),
-	// 		'separate_items_with_commas' => __( 'Separate collection categories with commas', 'ssm-team' ),
-	// 		'add_or_remove_items'        => __( 'Add or remove collection categories', 'ssm-team' ),
-	// 		'choose_from_most_used'      => __( 'Choose from the most used collection categories', 'ssm-team' ),
-	// 		'not_found'                  => __( 'No collection categories found.', 'ssm-team' ),
-	// 	);
+	protected function register_taxonomy_category() {
+		$labels = array(
+			'name'                       => __( 'Departments', 'ssm-team' ),
+			'singular_name'              => __( 'Department', 'ssm-team' ),
+			'menu_name'                  => __( 'Departments', 'ssm-team' ),
+			'edit_item'                  => __( 'Edit Department', 'ssm-team' ),
+			'update_item'                => __( 'Update Department', 'ssm-team' ),
+			'add_new_item'               => __( 'Add New Department', 'ssm-team' ),
+			'new_item_name'              => __( 'New Department', 'ssm-team' ),
+			'parent_item'                => __( 'Parent Department', 'ssm-team' ),
+			'parent_item_colon'          => __( 'Parent Department:', 'ssm-team' ),
+			'all_items'                  => __( 'All Departments', 'ssm-team' ),
+			'search_items'               => __( 'Search Departments', 'ssm-team' ),
+			'popular_items'              => __( 'Popular Departments', 'ssm-team' ),
+			'separate_items_with_commas' => __( 'Separate departments with commas', 'ssm-team' ),
+			'add_or_remove_items'        => __( 'Add or remove departments', 'ssm-team' ),
+			'choose_from_most_used'      => __( 'Choose from the most used departments', 'ssm-team' ),
+			'not_found'                  => __( 'No departments found.', 'ssm-team' ),
+		);
 
-	// 	$args = array(
-	// 		'labels'            => $labels,
-	// 		'public'            => true,
-	// 		'show_in_nav_menus' => true,
-	// 		'show_ui'           => true,
-	// 		'show_tagcloud'     => true,
-	// 		'hierarchical'      => true,
-	// 		'rewrite'           => array( 'slug' => 'team-category' ),
-	// 		'show_admin_column' => true,
-	// 		'query_var'         => true,
-	// 	);
+		$args = array(
+			'labels'            => $labels,
+			'public'            => false,
+			'show_in_nav_menus' => false,
+			'show_ui'           => true,
+			'show_tagcloud'     => false,
+			'hierarchical'      => false,
+			'rewrite'           => false,
+			'show_admin_column' => true,
+			'query_var'         => true,
+		);
 
-	// 	$args = apply_filters( 'ssm_team_category_args', $args );
+		$args = apply_filters( 'ssm_departments_args', $args );
 
-	// 	register_taxonomy( $this->taxonomies[0], $this->post_type, $args );
-	// }
+		register_taxonomy( $this->taxonomies[0], $this->post_type, $args );
+	}
 }
