@@ -4,5 +4,6 @@
 "0.1.2" : "Fixes plugin description",
 "0.1.3" : "Version bump",
 "0.1.4" : "updates post registration arguments",
-"0.1.5" : "adds support for department taxonomy"
+"0.1.5" : "adds support for department taxonomy",
+"0.1.6" : "changes departments support to hierarchical"
 }
