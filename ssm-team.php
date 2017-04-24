@@ -9,7 +9,7 @@
  * Plugin Name: SSM Team
  * Plugin URI:  http://secretstache.com
  * Description: Enables a Team Custom Post Type.
- * Version:     0.1.7
+ * Version:     0.1.8
  * Author:      Secret Stache Media
  * Author URI:  http://secretstache.com
  * Text Domain: ssm-team

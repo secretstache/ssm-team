@@ -20,7 +20,7 @@ class SSM_Team {
 	 *
 	 * @var string VERSION Plugin version.
 	 */
-	const VERSION = '0.1.7';
+	const VERSION = '0.1.8';
 
 	/**
 	 * Unique identifier for your plugin.
